@@ -1,16 +1,16 @@
 #this program demostrates a basic calculator
 
 
-def negative():
-    sub = int(input("how many times are you subtracting?  "))
-    sub1 = int(input("what is the number you are subtracting from?  "))
-    for k in range(sub):
+def negative(): #if there's a negative number, it won't question the integer being negative
+    sub = int(input("how many times are you subtracting?  ")) #asks how many times the user is subtracting (theres a high likely hood that theres a better system)
+    sub1 = int(input("what is the number you are subtracting from?  ")) #asks for the beginning number being subtracted
+    for k in range(sub): #whatever the user says for the first question is how many times they can subtract (i thought i was being smart)
       sub2 = eval(input("the number you are subtracting  "))
       print()
-      sub1 = sub1 - sub2
-      print("your current total is", sub1)
+      sub1 = sub1 - sub2 #the new sum is the previous sum subtracted ffrom the number inputed
+      print("your current total is", sub1) #prints it
 
-def no_negative():
+def no_negative(): #if there isn't a negative number, it will question hwy the number is negative
     sub = int(input("how many times are you subtracting?  "))
     sub1 = int(input("what is the number you are subtracting from?  "))
     for k in range(sub):
@@ -18,7 +18,8 @@ def no_negative():
       sub1 = sub1 - sub2
       print()
       print("your current total is", sub1)
-      if sub1 < 0:
+        #everything is the same except for this part
+      if sub1 < 0: #if the number being subtracted is negative and the user said it wouldn't be negative, it will ask the user if what they did was correct
         print("your number is currently negative")
         print()
         print("if this was a mistake,")
@@ -27,21 +28,21 @@ def no_negative():
         print()
         print("put 2 to end the program")
         print()
-        pl = eval(input("input answer here:  "))
+        pl = eval(input("input answer here:  ")) #gives them the option of undoing the previous action, or closing out the program
         if pl == "1":
             sub1 = sub1 + sub2
             print(sub1)
         if pl == "2":
             break
 
-def question1():
+def question1(): #asks if the number they want to subtract will be negative
     print("1. yes\n2 . no")
     question = eval(input("is the number you're subtracting negative"))
     if question == 1:
-        negative()
+        negative()  #if they put 1 meaning it will be negative, it will call the function "negative"
     elif question == 2:
-       no_negative()
-    else:
+       no_negative() #if they put 2, meaning it's not negative, then it will call "no_negative"
+    else: #if they put anything else, it will tell them to pick a answer choice and rerun this section
         print("please answer the question again using the answer choices")
         question1()
 
