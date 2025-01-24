@@ -1,0 +1,21 @@
+#Please know that I am a beginner to coding and i'm still learning so please forgive me if something can be done better
+
+#this program demostrates a basic beginner addition and subtraction calculator
+sum1 = 0 #variable for the sum
+program_end = 0 #variable to how printing how to end the program
+program_end2 = 0 #variable for ending the program
+#asks the user they're subtracting or adding
+print("to end the program, input 0 two times") #tells the user how to end the program
+while True:
+    add1 = int(input("input your number  ")) #asks for the number
+    sum1 = sum1 + add1
+    program_end += 1 
+    if program_end % 5 == 0:  #this make it so that whenever the the variable is able to be divided by 5 and have a remainer of 0, then it will print how to end the program    
+            #this is to make it look less cluttered in the output window.
+        print("to end the program, input 0 two times")
+    if add1 == 0:
+        program_end2 += 1 #adds 1 to the ending program process
+    if program_end2 == 2: #if it reaches 2, then it will say the sum and end the program.
+        print("The sum is", sum1)#yes, it is a pretty bad system if the user has to add 0 multiple times
+        print("thanks for using the program :)")
+        break
