@@ -1,0 +1,48 @@
+#this program demostrates a basic calculator
+
+
+def negative():
+    sub = int(input("how many times are you subtracting?  "))
+    sub1 = int(input("what is the number you are subtracting from?  "))
+    for k in range(sub):
+      sub2 = eval(input("the number you are subtracting  "))
+      print()
+      sub1 = sub1 - sub2
+      print("your current total is", sub1)
+
+def no_negative():
+    sub = int(input("how many times are you subtracting?  "))
+    sub1 = int(input("what is the number you are subtracting from?  "))
+    for k in range(sub):
+      sub2 = eval(input("the number you are subtracting  "))
+      sub1 = sub1 - sub2
+      print()
+      print("your current total is", sub1)
+      if sub1 < 0:
+        print("your number is currently negative")
+        print()
+        print("if this was a mistake,")
+        print()
+        print("put 1 to undo the previous action")
+        print()
+        print("put 2 to end the program")
+        print()
+        pl = eval(input("input answer here:  "))
+        if pl == "1":
+            sub1 = sub1 + sub2
+            print(sub1)
+        if pl == "2":
+            break
+
+def question1():
+    print("1. yes\n2 . no")
+    question = eval(input("is the number you're subtracting negative"))
+    if question == 1:
+        negative()
+    elif question == 2:
+       no_negative()
+    else:
+        print("please answer the question again using the answer choices")
+        question1()
+
+question1()
