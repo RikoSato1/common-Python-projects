@@ -1,5 +1,3 @@
-#Please know that I am a beginner to coding and i'm still learning so please forgive me if something can be done better
-
 #this program demostrates a basic beginner addition and subtraction calculator
 sum1 = 0 #variable for the sum
 program_end = 0 #variable to how printing how to end the program
