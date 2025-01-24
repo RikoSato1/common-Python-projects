@@ -1,2 +1,2 @@
 # common-Python-projects
-I'm still a pretty new to Python, so don't expect anything lavish. 
+I'm still a relatively new to Python, so please forgive me if something can be done more efficently
